@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Font Size</title>
+    <style>
+        .text {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Change Font Size</h1>
+
+    <label for="font-size-range">Font Size:</label>
+    <input type="range" id="font-size-range" min="8" max="50" value="16">
+
+    <p class="text" id="text">This is some text.</p>
+
+    <script>
+        var rangeInput = document.getElementById("font-size-range");
+        var textElement = document.getElementById("text");
+
+        rangeInput.addEventListener("input", function() {
+            var fontSize = rangeInput.value + "px";
+            textElement.style.fontSize = fontSize;
+        });
+    </script>
+</body>
+</html>
